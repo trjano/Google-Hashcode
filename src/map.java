@@ -39,6 +39,18 @@ public class map {
         return listOfDronesWorking.size()==MAXIMUM_NUMBER_OF_DRONES;
     }
 
+    public void moveDroneToWarehouse(warehouse WH, drone DR){
+
+        mathClass mathClass;
+        double Distance = mathClass.distance(DR.getPositionX(),DR.getPositionY(),WH.getPositionX(),WH.getPositionY());
+        double distanceX = mathClass.movePositionX(DR.getPositionX(),DR.getPositionY(),WH.getPositionX(),WH.getPositionY());
+        double distanceY = mathClass.movePositionY(DR.getPositionX(),DR.getPositionY(),WH.getPositionX(),WH.getPositionY());
+            if (distanceX>distanceY){
+                DR.setPositionX(DR.getPositionX()+1);
+            }
+            else
+
+    }
 
 
 }
